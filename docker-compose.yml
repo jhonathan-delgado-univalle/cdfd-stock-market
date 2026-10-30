@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    image: stock-market:1.0
+    environment:
+      STOCK: ${STOCK:-GOOGL}
+    ports:
+      - "5001:5000"
